@@ -1,0 +1,22 @@
+.seachLocation{
+    width: 100% !important;
+    border: 1px solid #CDCDCD;
+    border-radius: 6px;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+.mainheader{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-around;
+    margin: 65px 90px 0px 90px;
+    padding: 0 0 65px 0 ;
+    border-bottom: 1px solid black
+}
+
+.gradBtn{
+    background-image: linear-gradient(to right, #D100F3 , #002BC5);
+}
