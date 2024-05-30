@@ -38,8 +38,10 @@ const Dashboard = () => {
             comp.name.includes(searchText) || comp.address.includes(searchText)
         )
       );
+    }else{
+      setCompanies(companyData);
     }
-  }, [searchText]);
+  }, [searchText, companyData]);
 
   const handleRatingChange = (newRating) => {
     setRating(newRating);
@@ -50,6 +52,7 @@ const Dashboard = () => {
   };
 
   const handleModalSave = () => {
+    const reviews = companyData[extendedIndex].reviewData ?? [];
     const updatedData = companyData.map((data, i) => {
       if (extendedIndex === i) {
         return {
@@ -61,7 +64,7 @@ const Dashboard = () => {
               date: getCurrentDateTime(),
               content: reviewer.review,
             },
-            ...data.reviewData,
+            ...reviews
           ],
         };
       }
